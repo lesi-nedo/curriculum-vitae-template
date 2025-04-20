@@ -1,0 +1,40 @@
+\letterbody{
+  % Opening
+  Dear Hiring Manager,
+  \vspace{0.5cm}
+
+  % Cover letter body
+  I am writing to express my interest in the [POSITION] at [COMPANY], as advertised on [SOURCE]. With my background in [FIELD] and experience in [RELEVANT SKILLS], I believe I would be a valuable addition to your team.
+
+  My professional experience includes [KEY ACHIEVEMENT], where I successfully [WHAT YOU DID AND THE RESULT]. Additionally, I have developed strong skills in [SKILL AREAS] that align perfectly with the requirements outlined in your job posting.
+
+  What draws me to [COMPANY] is [SOMETHING SPECIFIC ABOUT THE COMPANY]. I am particularly excited about [COMPANY PROJECT/VALUE/INNOVATION] and would welcome the opportunity to contribute to your continued success.
+
+  % Decorative element before closing
+  \begin{center}
+    \begin{tikzpicture}
+      \foreach \i in {1,...,5}{
+        \pgfmathsetmacro{\colorselect}{mod(\i,4)} % Cycle through 4 colors
+        \ifcase\colorselect
+          \definecolor{dotcolor}{named}{primaryAccent}
+        \or
+          \definecolor{dotcolor}{named}{secondaryAccent}
+        \or
+          \definecolor{dotcolor}{named}{tertiaryAccent}
+        \or
+          \definecolor{dotcolor}{named}{quaternaryAccent}
+        \fi
+        % Calculate y-position based on a sine wave for a subtle dynamic effect
+        \pgfmathsetmacro{\ypos}{sin(\i*72)*1.5} % Adjust multiplier for wave amplitude
+        % Vary size slightly based on position in wave or keep constant
+        \pgfmathsetmacro{\dotsize}{2.0 + abs(cos(\i*72))*1.0} % Size varies subtly (2.0pt to 3.0pt)
+        % Adjust opacity, maybe make it less linear or add slight randomness
+        \pgfmathsetmacro{\opacity}{0.4 + 0.3*rand} % Random opacity for texture
+        \filldraw[dotcolor!70!white, opacity=\opacity] (\i*0.45-1.35, \ypos pt) circle (\dotsize pt); % Slightly increased spacing
+      }
+    \end{tikzpicture}
+  \end{center}
+  % Closing paragraph
+  I would welcome the opportunity to discuss how my skills and experience would benefit your organization. Thank you for considering my application. I look forward to hearing from you.
+}
+\closing{Sincerely,}
