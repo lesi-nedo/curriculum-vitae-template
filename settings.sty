@@ -37,7 +37,8 @@
 
 \newcommand{\smallcaps}[1]{\textsc{\lowercase{#1}}}
 
-\RequirePackage[a4paper,nohead,nofoot,hmargin=2.25cm,vmargin=2cm]{geometry}
+\RequirePackage[a4paper,nohead,nofoot,hmargin=1.25cm,vmargin=1cm]{geometry}
+
 \RequirePackage{relsize}
 \RequirePackage[dvipsnames,svgnames]{xcolor}
 \RequirePackage{tikz}
@@ -86,17 +87,16 @@
   {}{}
 
 \headerscale{1}
-%\setlength{\headerspace}{6pt}
+\setlength{\headerspace}{1pt}
 \rubricfont{\Large\bfseries\sffamily}
-\setlength{\rubricspace}{2pt}
-%\setlength{\rubricafterspace}{-9pt}
-\setlength{\rubricafterspace}{-3pt}
+\setlength{\rubricspace}{1pt}
+\setlength{\rubricafterspace}{-10pt}
 \setlength{\subrubricspace}{3pt}
-\setlength{\subrubricbeforespace}{4pt}
+\setlength{\subrubricbeforespace}{0pt}
 \def\@@rubrichead#1{%
   \begin{tikzpicture}[baseline]%\
-  \shade[left color=SwishLineColour!60!white, right color=white] rectangle (\@almosttextwidth,2.5pt);
-  \node[font={\@rubricfont},inner sep=0pt,text ragged,anchor=south west,text depth=.5ex,text height=1.5ex] at (1pt,2pt) {#1};
+  \shade[left color=SwishLineColour!60!white, right color=white] rectangle (\@almosttextwidth,2pt);
+  \node[font={\@rubricfont},inner sep=0pt,text ragged,anchor=south west,text depth=0.5ex,text height=0.5ex] at (1pt,2pt) {#1};
   \end{tikzpicture}%
   \vspace\rubricspace%
 }
@@ -104,11 +104,11 @@
 \subrubricfont{\large\bfseries\sffamily}
 \subrubricalignment{l}
 
-\newcommand{\makefield}[2]{\makebox[1.5em]{\color{MarkerColour!85!black}#1} #2\hspace{2em}}
+\newcommand{\makefield}[2]{\makebox[1.5em]{\color{MarkerColour!85!black}#1} #2\hspace{1em}}
 
 \keyalignment{r}
 \rubricalignment{l}
-\renewcommand{\arraystretch}{1.25}
+\renewcommand{\arraystretch}{1.1}
 \urlstyle{tt}
 
 \newcommand{\prefixmarker}[1]{\def\@prefixmarker{#1}}
@@ -119,6 +119,7 @@
   \color{MarkerColour!80!black}\@prefixmarker%
   \hspace*{1ex}%
 }
+
 
 
 \newcommand{\profilepic}[1]{%
