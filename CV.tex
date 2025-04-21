@@ -98,44 +98,44 @@
 
 \leftheader{%
   \begin{tikzpicture}
-    \node[right, text=TextColor] at (0,0.1) {\huge\textbf{\sffamily YOUR NAME}};
+    \node[right, text=TextColor] at (0,0.1) {\LARGE\textbf{\sffamily YOUR NAME}};
     
     % Professional title
-    \node[right, text=TextColor] at (0,-.7) {\large\sffamily Professional Title | Industry Focus};
   \end{tikzpicture}
   
-  \vspace{0.2cm}
+  \vspace{0.4cm}
   
   % Modern contact info with consistent styling
   \begin{tabular}{l l l}
     \makefield{\faEnvelope[regular]}{\href{mailto:example@mail.com}{\texttt{example@mail.com}}} &
     \makefield{\faLinkedin}{\href{https://linkedin.com/in/yourusername/}{\texttt{yourusername}}} &
-    \makefield{{\scriptsize\simpleicon{github}}}{\href{https://github.com/yourusername}{\texttt{@yourusername}}} \\
+    \makefield{\faGithub}{\href{https://github.com/yourusername}{\texttt{@yourusername}}} \\
     
     \makefield{\faGlobe}{\url{http://yourwebsite.com}} &
     \makefield{\faMapMarked*}{\texttt{Your, Location}} &
     \makefield{\faMobile*}{+1 (234) 567-8901} \\
   \end{tabular}
 }
+\rightheader{~}
 
-\rightheader{%
-  \vspace*{-1cm}
-  \hspace*{-2cm}
-  \profilepic{./assets/Default_pfp.jpg} % Add your profile picture here
-}
+%% Uncomment the following line to add a profile picture
+% \rightheader{%
+%   \vspace*{-1cm}
+%   \hspace*{-2cm}
+%   \profilepic{./assets/Default_pfp.jpg} % Add your profile picture here
+% }
 
 
 
 
 \title{Curriculum Vitae}
-
 \begin{document}
 \makeheaders[c]
-\makerubric{summary}
+
 \makerubric{employment}
 \makerubric{education}
-\makerubric{skills}
 \makerubric{projects}
+\makerubric{skills}
 \makerubric{publications}
 \makerubric{referee}
 

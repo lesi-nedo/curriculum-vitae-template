@@ -25,7 +25,7 @@ The repository includes a matching cover letter template that complements the CV
 
 ### Customization
 
-- **CV**: Update the `summary.tex`, `skills.tex`, `employment.tex`, and other section files with your personal information.
+- **CV**: Update the `skills.tex`, `employment.tex`, and other section files with your personal information.
 - **Cover Letter**: Modify the `contacts.tex`, `recipient.tex`, and `body.tex` files to customize your letter content.
 
 ## Example Curriculum Vitae
